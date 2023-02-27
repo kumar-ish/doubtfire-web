@@ -332,6 +332,9 @@ export class StaffTaskListComponent implements OnInit, OnChanges {
   }
 
   private scrollToTaskInList(task) {
+    if (!task) {
+      return;
+    }
     const taskEl = document.querySelector(`staff-task-list #${task.taskKeyToIdString()}`) as any;
     if (!taskEl) {
       return;

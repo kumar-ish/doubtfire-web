@@ -345,7 +345,7 @@ export class Task extends Entity {
 
   public taskKey(): { studentId: number; taskDefAbbr: string } {
     return {
-      studentId: this.project.student.id,
+      studentId: this.project.student?.id,
       taskDefAbbr: this.definition.abbreviation,
     };
   }
